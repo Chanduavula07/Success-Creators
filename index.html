@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🩺🏠 Door2Care Delivery Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="marquee">
+    <marquee>🚚 Door2Care: Fast, reliable delivery of anything, anywhere! Now book doctor appointments instantly! 👨‍⚕️📅</marquee>
+  </div>
+  <header>
+    <h1 class="site-name"><span class="header-emoji">🩺🏠</span> Door2Care</h1>
+    <nav>
+      <a href="#" onclick="openLoginModal(); return false;">Login</a>
+      <a href="#" onclick="openRegisterModal(); return false;">Register</a>
+    </nav>
+  </header>
+  <main>
+    <div class="search-bar">
+      <input type="text" placeholder="🔍 Search services, categories, doctors..." id="searchInput" onkeyup="searchItems()">
+    </div>
+    <h2 class="section-title">🛎️ Delivery Categories</h2>
+    <div class="category-gallery" id="categoryGallery">
+      <div class="category-card glass">
+        <span class="emoji">🛒</span>
+        <h3>Groceries</h3>
+        <p>Fresh groceries delivered instantly.</p>
+        <button class="primary-btn" onclick="showCategoryItems('Groceries')">Order Now</button>
+      </div>
+      <div class="category-card glass">
+        <span class="emoji">💻</span>
+        <h3>Electronics</h3>
+        <p>Get gadgets and electronics at your doorstep.</p>
+        <button class="primary-btn">Order Now</button>
+      </div>
+      <div class="category-card glass">
+        <span class="emoji">👗</span>
+        <h3>Clothes</h3>
+        <p>Latest fashion delivered to you.</p>
+        <button class="primary-btn">Order Now</button>
+      </div>
+      <div class="category-card glass">
+        <span class="emoji">📄</span>
+        <h3>Documents</h3>
+        <p>Send or receive documents securely and fast.</p>
+        <button class="primary-btn">Order Now</button>
+      </div>
+      <div class="category-card glass">
+        <span class="emoji">💊</span>
+        <h3>Medicines</h3>
+        <p>Essential medicines delivered anytime.</p>
+        <button class="primary-btn">Order Now</button>
+      </div>
+      <div class="category-card glass">
+        <span class="emoji">🎁</span>
+        <h3>Gifts</h3>
+        <p>Surprise your loved ones with gifts at their door.</p>
+        <button class="primary-btn">Order Now</button>
+      </div>
+    </div>
+
+    <!-- MODAL for Category Items -->
+    <div id="categoryModal" class="modal">
+      <div class="modal-content glass">
+        <span class="close" onclick="closeCategoryModal()">&times;</span>
+        <h2 id="categoryTitle">Category Items</h2>
+        <div id="categoryItems" style="font-size: 2rem; text-align:center; margin-top: 15px;"></div>
+        <button class="primary-btn" style="margin-top: 20px;" onclick="closeCategoryModal()">Close</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Door2Care. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
